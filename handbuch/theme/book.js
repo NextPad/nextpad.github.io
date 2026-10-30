@@ -909,3 +909,20 @@ aria-label="Show hidden lines"></button>';
 document.querySelectorAll('.content main pre, .content main pre > code').forEach(el => {
     if (el.scrollWidth > el.clientWidth) { el.tabIndex = 0; }
 });
+
+// NextPad: Die Trefferzeile der Suche kommt aus mdBook immer englisch; im deutschen Buch wird sie übersetzt.
+(function nextpadSuche() {
+    const kopf = document.getElementById('mdbook-searchresults-header');
+    if (!kopf || document.documentElement.lang !== 'de') { return; }
+    const deutsch = t => {
+        let m = t.match(/^No search results for '(.*)'\.$/s);
+        if (m) { return `Keine Treffer für „${m[1]}“.`; }
+        m = t.match(/^(\d+) search results? for '(.*)':$/s);
+        if (m) { return `${m[1]} Treffer für „${m[2]}“:`; }
+        return null;
+    };
+    new MutationObserver(() => {
+        const neu = deutsch(kopf.textContent);
+        if (neu !== null && neu !== kopf.textContent) { kopf.textContent = neu; }
+    }).observe(kopf, { childList: true, characterData: true, subtree: true });
+})();

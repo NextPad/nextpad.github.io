@@ -65,14 +65,14 @@
     <body>
     <div id="mdbook-help-container">
         <div id="mdbook-help-popup">
-            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <h2 class="mdbook-help-title">{{#if (eq language "de")}}Tastenkürzel{{else}}Keyboard shortcuts{{/if}}</h2>
             <div>
-                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>{{#if (eq language "de")}}<kbd>←</kbd> oder <kbd>→</kbd> blättert zwischen den Kapiteln{{else}}Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters{{/if}}</p>
                 {{#if search_enabled}}
-                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>{{#if (eq language "de")}}<kbd>S</kbd> oder <kbd>/</kbd> sucht im Handbuch{{else}}Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book{{/if}}</p>
                 {{/if}}
-                <p>Press <kbd>?</kbd> to show this help</p>
-                <p>Press <kbd>Esc</kbd> to hide this help</p>
+                <p>{{#if (eq language "de")}}<kbd>?</kbd> zeigt diese Hilfe{{else}}Press <kbd>?</kbd> to show this help{{/if}}</p>
+                <p>{{#if (eq language "de")}}<kbd>Esc</kbd> schließt diese Hilfe{{else}}Press <kbd>Esc</kbd> to hide this help{{/if}}</p>
             </div>
         </div>
     </div>
