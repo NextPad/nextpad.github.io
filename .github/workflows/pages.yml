@@ -1,4 +1,4 @@
-# Builds the site with Zola and publishes it on GitHub Pages.
+# Builds the site with Zola and the manual with mdBook, then publishes both on GitHub Pages.
 name: pages
 
 on:
@@ -22,8 +22,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: taiki-e/install-action@v2
         with:
-          tool: zola@0.23.6
+          tool: zola@0.23.6,mdbook@0.5.4
       - run: zola build
+      - name: Build the manual (German at /handbuch/, English at /en/manual/)
+        run: |
+          mdbook build handbuch/de -d "$PWD/public/handbuch"
+          mdbook build handbuch/en -d "$PWD/public/en/manual"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
