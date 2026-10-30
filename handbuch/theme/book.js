@@ -926,3 +926,25 @@ document.querySelectorAll('.content main pre, .content main pre > code').forEach
         if (neu !== null && neu !== kopf.textContent) { kopf.textContent = neu; }
     }).observe(kopf, { childList: true, characterData: true, subtree: true });
 })();
+
+// NextPad: Kopf der Projektseite. Die Seitenleiste beginnt unter ihm; der Sprachhinweis und das Merken der
+// Sprachwahl verhalten sich wie auf der Projektseite (gleicher Schlüssel).
+(function nextpadKopf() {
+    const kopf = document.querySelector('.np-site-kopf');
+    if (kopf) {
+        const setze = () => document.documentElement.style.setProperty('--np-oben', Math.max(0, kopf.getBoundingClientRect().bottom) + 'px');
+        setze();
+        addEventListener('scroll', setze, { passive: true });
+        addEventListener('resize', setze);
+        // Höhe ändert sich auch, wenn der Sprachhinweis erscheint oder die Navigation umbricht
+        if ('ResizeObserver' in window) { new ResizeObserver(setze).observe(kopf); }
+    }
+    try {
+        const wahl = localStorage.getItem('nextpad-site-lang');
+        const erste = (navigator.languages || [navigator.language || '']).map(l => String(l).slice(0, 2).toLowerCase()).filter(l => l === 'de' || l === 'en')[0];
+        if (!wahl && erste && erste !== document.documentElement.lang) { document.getElementById('langhint').hidden = false; }
+    } catch (e) {}
+    document.querySelectorAll('a[data-lang]').forEach(a => {
+        a.addEventListener('click', () => { try { localStorage.setItem('nextpad-site-lang', a.dataset.lang); } catch (e) {} });
+    });
+})();

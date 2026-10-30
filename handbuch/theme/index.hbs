@@ -76,6 +76,26 @@
             </div>
         </div>
     </div>
+    <div class="np-site np-site-kopf">
+    <a class="skip" href="#mdbook-content">{{#if (eq language "de")}}Zum Inhalt{{else}}Skip to content{{/if}}</a>
+    <p class="langhint" id="langhint" lang="{{#if (eq language "de")}}en{{else}}de{{/if}}" hidden><span class="wrap">{{#if (eq language "de")}}This manual is also available in English. <a href="/en/manual/" hreflang="en" data-lang="en">English</a>{{else}}Dieses Handbuch gibt es auch auf Deutsch. <a href="/handbuch/" hreflang="de" data-lang="de">Deutsch</a>{{/if}}</span></p>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="{{#if (eq language "de")}}/{{else}}/en/{{/if}}"><img src="/bilder/nextpad-zeichen.svg" alt="" width="34" height="34"><span>Next<b>Pad</b></span></a>
+        <nav aria-label="{{#if (eq language "de")}}Seiten{{else}}Pages{{/if}}">
+          <a href="{{#if (eq language "de")}}/{{else}}/en/{{/if}}#lehre">{{#if (eq language "de")}}Lehre{{else}}Teaching{{/if}}</a>
+          <a href="{{#if (eq language "de")}}/{{else}}/en/{{/if}}#funktionen">{{#if (eq language "de")}}Funktionen{{else}}Features{{/if}}</a>
+          <a href="{{#if (eq language "de")}}/{{else}}/en/{{/if}}#lernplattformen">{{#if (eq language "de")}}Lernplattformen{{else}}Learning platforms{{/if}}</a>
+          <a href="{{#if (eq language "de")}}/{{else}}/en/{{/if}}#themes">{{#if (eq language "de")}}Themes{{else}}Looks{{/if}}</a>
+          <a href="{{#if (eq language "de")}}/{{else}}/en/{{/if}}#betrieb">{{#if (eq language "de")}}Betrieb{{else}}Operation{{/if}}</a>
+          <a href="{{#if (eq language "de")}}/{{else}}/en/{{/if}}#installieren">{{#if (eq language "de")}}Installieren{{else}}Install{{/if}}</a>
+          <a href="{{#if (eq language "de")}}/handbuch/{{else}}/en/manual/{{/if}}" aria-current="page">{{#if (eq language "de")}}Handbuch{{else}}Manual{{/if}}</a>
+          <a href="https://github.com/NextPad/NextPad">GitHub</a>
+          {{#if (eq language "de")}}<a class="lang" href="/en/manual/" hreflang="en" lang="en" data-lang="en" aria-label="English version">English</a>{{else}}<a class="lang" href="/handbuch/" hreflang="de" lang="de" data-lang="de" aria-label="Deutsche Fassung">Deutsch</a>{{/if}}
+        </nav>
+      </div>
+    </header>
+    </div>
     <div id="mdbook-body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
@@ -164,10 +184,9 @@
                         {{/if}}
                     </div>
 
-                    <h1 class="menu-title np-kopf"><a class="np-marke" href="/" title="{{#if (eq language "de")}}Zur Projektseite{{else}}To the project site{{/if}}"><svg viewBox="3 3 42 42" width="28" height="28" aria-hidden="true"><rect x="4" y="4" width="40" height="32" fill="#007a96"/><path d="M4 36H18L4 45Z" fill="#007a96"/><rect x="11" y="18" width="12" height="4" fill="#fff"/><rect x="27" y="11" width="4" height="18" fill="#fff"/></svg><span>NextPad</span></a><span class="np-buch">{{#if (eq language "de")}}Handbuch{{else}}Manual{{/if}}</span></h1>
+                    <p class="menu-title np-buch">{{#if (eq language "de")}}Handbuch{{else}}Manual{{/if}}</p>
 
                     <div class="right-buttons">
-                        <nav class="np-sprache" aria-label="{{#if (eq language "de")}}Sprache{{else}}Language{{/if}}"><a href="/handbuch/" lang="de" hreflang="de"{{#if (eq language "de")}} aria-current="page"{{/if}}>DE</a><span aria-hidden="true">|</span><a href="/en/manual/" lang="en" hreflang="en"{{#if (eq language "en")}} aria-current="page"{{/if}}>EN</a></nav>
                         {{#if print_enable}}
                         <a href="{{ path_to_root }}print.html" title="{{#if (eq language "de")}}Buch drucken{{else}}Print this book{{/if}}" aria-label="{{#if (eq language "de")}}Buch drucken{{else}}Print this book{{/if}}">
                             {{fa "solid" "print" "print-button"}}
@@ -267,6 +286,24 @@
                     </a>
                 {{/if}}
             </nav>
+            <footer class="np-site">
+              <div class="wrap">
+                <div>
+                  <p><b>NextPad 0.18.0</b> · {{#if (eq language "de")}}Idee, Konzept und Entwicklung: Christian-Maximilian Steier{{else}}Idea, concept and development: Christian-Maximilian Steier{{/if}}</p>
+                  <p>{{#if (eq language "de")}}Entstanden am ZWEK der Hochschule Düsseldorf als Nachfolger eines Etherpad-Dienstes.{{else}}Created at the ZWEK of Hochschule Düsseldorf as the successor of an Etherpad service.{{/if}}</p>
+                </div>
+                <div>
+                  <p>
+                    <a href="https://github.com/NextPad/NextPad/blob/main/LICENSE">EUPL-1.2</a> ·
+                    <a href="https://github.com/NextPad/NextPad/blob/main/CHANGELOG.md">{{#if (eq language "de")}}Änderungen{{else}}Changes{{/if}}</a> ·
+                    <a href="https://github.com/NextPad/NextPad/blob/main/{{#if (eq language "de")}}CONTRIBUTING.de.md{{else}}CONTRIBUTING.md{{/if}}">{{#if (eq language "de")}}Mitwirken{{else}}Contributing{{/if}}</a> ·
+                    <a href="https://github.com/NextPad/NextPad/blob/main/CITATION.cff">{{#if (eq language "de")}}Zitation{{else}}Citation{{/if}}</a> ·
+                    {{#if (eq language "de")}}<a href="/en/manual/" hreflang="en" lang="en" data-lang="en">English</a>{{else}}<a href="/handbuch/" hreflang="de" lang="de" data-lang="de">Deutsch</a>{{/if}}
+                  </p>
+                </div>
+              </div>
+            </footer>
+
 
         </div>
 

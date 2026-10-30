@@ -383,7 +383,7 @@
 }
 
 /* ---------- NextPad: Farben, Schrift und Formen wie die Projektseite ---------- */
-:root { --np-primary: #007a96; --np-primary-ink: #005f75; --np-line: #d5e2e5; --np-bg-alt: #f2f7f8; --np-muted: #4f5b5e; --content-max-width: 760px; --menu-bar-height: 56px; }
+:root { --np-primary: #007a96; --np-primary-ink: #005f75; --np-line: #d5e2e5; --np-bg-alt: #f2f7f8; --np-muted: #4f5b5e; --np-tint: #e0f0f4; --content-max-width: 760px; --menu-bar-height: 56px; }
 .light, html:not(.js) {
     --bg: #ffffff; --fg: #1e1e1e;
     --sidebar-bg: #f2f7f8; --sidebar-fg: #1e1e1e; --sidebar-non-existant: #5b6669; --sidebar-active: #005f75; --sidebar-spacer: #d5e2e5;
@@ -393,7 +393,7 @@
     --table-border-color: #d5e2e5; --table-header-bg: #e0f0f4; --table-alternate-bg: #f7fafb;
     --searchbar-border-color: #8fa3a8; --searchbar-bg: #ffffff; --searchbar-fg: #1e1e1e; --searchbar-shadow-color: transparent;
     --searchresults-header-fg: #4f5b5e; --searchresults-border-color: #d5e2e5; --searchresults-li-bg: #f2f7f8; --search-mark-bg: #e0f0f4;
-    --np-primary: #007a96; --np-primary-ink: #005f75; --np-line: #d5e2e5; --np-bg-alt: #f2f7f8; --np-muted: #4f5b5e;
+    --np-primary: #007a96; --np-primary-ink: #005f75; --np-line: #d5e2e5; --np-bg-alt: #f2f7f8; --np-muted: #4f5b5e; --np-tint: #e0f0f4;
 }
 .navy {
     --bg: #141a1c; --fg: #f1f4f5;
@@ -404,25 +404,13 @@
     --table-border-color: #2e3a3e; --table-header-bg: #17343c; --table-alternate-bg: #182023;
     --searchbar-border-color: #4f5b5e; --searchbar-bg: #1b2326; --searchbar-fg: #f1f4f5; --searchbar-shadow-color: transparent;
     --searchresults-header-fg: #a9b6b9; --searchresults-border-color: #2e3a3e; --searchresults-li-bg: #1b2326; --search-mark-bg: #17343c;
-    --np-primary: #3fb4d0; --np-primary-ink: #7fd4ff; --np-line: #2e3a3e; --np-bg-alt: #1b2326; --np-muted: #a9b6b9;
+    --np-primary: #3fb4d0; --np-primary-ink: #7fd4ff; --np-line: #2e3a3e; --np-bg-alt: #1b2326; --np-muted: #a9b6b9; --np-tint: #17343c;
 }
 html:root { font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", sans-serif; --mono-font: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; }
 html:root body { font-size: 1.7rem; line-height: 1.6; }
 /* eckig wie die Projektseite */
 html:root .content pre, html:root code, html:root #mdbook-searchbar, html:root .theme-popup, html:root .content video, html:root .content img { border-radius: 0; }
-/* Kopfzeile: Zeichen, Name, Buch, Sprache */
-html:root .menu-bar { border-block-end: 3px solid var(--np-primary); }
-html:root .np-kopf { display: flex; align-items: center; justify-content: center; gap: .6em; font-size: 1.8rem; }
-html:root .np-marke { display: inline-flex; align-items: center; gap: .45em; color: var(--fg); text-decoration: none; font-weight: 700; }
-html:root .np-marke:hover span { text-decoration: underline; }
-html:root .np-buch { color: var(--np-muted); font-weight: 400; }
-html:root .np-marke svg { flex: none; }
 html:root .sidebar { --sidebar-header-border-color: var(--np-primary); }
-@media (max-width: 560px) { html:root .np-buch { display: none; } html:root .np-sprache { gap: .1em; margin-inline-end: 0; } html:root .np-sprache span { display: none; } }
-html:root .np-sprache { display: inline-flex; align-items: center; gap: .4em; margin-inline-end: .6em; font-weight: 700; }
-html:root .np-sprache a { color: var(--fg); text-decoration: none; padding: .55em .35em; min-width: 44px; min-height: 44px; display: inline-grid; place-items: center; }
-html:root .np-sprache a[aria-current] { text-decoration: underline; text-underline-offset: .25em; }
-html:root .np-sprache span { color: var(--np-muted); }
 /* Hell und dunkel folgen dem System; die Auswahl weiterer mdBook-Themes entfällt */
 html:root #mdbook-theme-toggle { display: none; }
 /* Bewegtbild mit Standbild, Bedienelementen und Schrittliste darunter */
@@ -452,3 +440,35 @@ html:root .np-kasten ul { margin: .3em 0 .4em; }
 html:root .np-begriffe dl { margin: .3em 0 .4em; }
 html:root .np-begriffe dt { font-weight: 700; margin-top: .5em; }
 html:root .np-begriffe dd { margin-inline-start: 0; }
+
+/* ---------- Kopf und Fuß wie auf der Projektseite (site/static/style.css, rem dort = 16 px) ---------- */
+html:root .np-site { font-size: 17px; line-height: 1.6; color: var(--fg); background: var(--bg); }
+html:root .np-site, html:root .np-site * { box-sizing: border-box; }
+html:root .np-site .wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+html:root .np-site .skip { position: absolute; left: -999px; top: 8px; background: var(--bg); padding: 8px 12px; z-index: 200; }
+html:root .np-site .skip:focus { left: 16px; }
+html:root .np-site p { margin: 0; }
+html:root .np-site .top { border-bottom: 1px solid var(--np-line); }
+html:root .np-site .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
+html:root .np-site .brand { display: flex; align-items: center; gap: 10px; color: var(--fg); text-decoration: none; font-size: 21.6px; }
+html:root .np-site .brand img { width: 34px; height: 34px; }
+html:root .np-site .brand b { font-weight: 700; }
+html:root .np-site .top nav { display: flex; gap: 20px; flex-wrap: wrap; font-size: 15.2px; }
+html:root .np-site .top nav a { color: var(--fg); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+html:root .np-site .top nav a:hover { color: var(--np-primary-ink); text-decoration: underline; }
+html:root .np-site .top nav a[aria-current] { color: var(--np-primary-ink); text-decoration: underline; text-underline-offset: 2px; }
+html:root .np-site .top nav a.lang { border: 1px solid var(--np-line); padding-inline: 12px; }
+html:root .np-site .langhint { background: var(--np-tint); font-size: 14.72px; }
+html:root .np-site .langhint .wrap { display: block; padding-block: 10px; }
+html:root .np-site .langhint a { color: var(--np-primary-ink); }
+html:root footer.np-site { border-top: 1px solid var(--np-line); padding-block: 32px 40px; font-size: 14.72px; color: var(--np-muted); margin-top: 48px; }
+html:root footer.np-site .wrap { display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; }
+html:root footer.np-site p + p { margin-top: 6px; }
+html:root footer.np-site a { color: var(--np-primary-ink); text-underline-offset: 2px; }
+html:root .np-site :focus-visible { outline: 3px solid var(--np-primary); outline-offset: 2px; }
+@media (max-width: 560px) { html:root .np-site .top nav { gap: 14px; } }
+/* Die Seitenleiste beginnt unter dem Kopf und rückt beim Scrollen nach oben (Wert setzt book.js) */
+html:root .sidebar { top: var(--np-oben, 0px); }
+/* mdBook-Leiste: Inhaltsverzeichnis, Suche, Buchtitel */
+html:root .menu-bar { border-block-end: 1px solid var(--np-line); }
+html:root .np-buch { font-weight: 700; font-size: 1.8rem; }
