@@ -33,6 +33,7 @@ citation = "Zitation"
 changelog = "Änderungen"
 contributing = "Mitwirken"
 other_hint = "This page is also available in English."
+og_image_alt = "Ein Pad in NextPad: Aufgabenliste einer Gruppe, der neue Satz einer Person farbig markiert."
 
 [languages.en]
 title = "NextPad"
@@ -62,3 +63,4 @@ citation = "Citation"
 changelog = "Changes"
 contributing = "Contributing"
 other_hint = "Diese Seite gibt es auch auf Deutsch."
+og_image_alt = "A pad in NextPad: a group's task list, one person's new sentence marked in colour."
