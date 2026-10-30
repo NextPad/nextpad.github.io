@@ -1,13 +1,12 @@
 +++
 title = "NextPad · Etherpad alternative for teaching, Moodle and ILIAS"
-description = "Write together in seminars and lectures: pad with timeline, idea collection, quiz and drawing board. No account for students, data stays at the university."
+description = "Write together in seminars and lectures: pad with timeline, idea collection, quiz and drawing board. No account for participants, data on your own server."
 
 [extra]
 kicker = "For teaching · free software (EUPL-1.2)"
-h1 = "Write, learn through play and draw together,"
-h1_em = "in seminars and lectures"
-lead = "Groups write in the same text, the plenary collects questions and votes, teams compete in a quiz. Students need no account, a link or QR code is enough, on a phone too. The data stays on the university’s server."
-facts = ["no account for students", "on a phone too", "data stays at the university", "on its own or in Moodle and ILIAS", "German and English"]
+h1 = "Write, learn through play and draw together"
+lead = "Groups write in the same text, the plenary collects questions and votes, teams compete in a quiz. Participants need no account, a link or QR code is enough, on desktop and mobile devices. The data stays on the institution’s server."
+facts = ["no account for participants", "on desktop and mobile devices", "data stays on your own server", "on its own or in Moodle and ILIAS", "German and English"]
 hero_alt = "A pad in the browser: heading “Audio-Feature: Klang des Campus”, a task list for Lea, Jonas and Mira, Jonas’ new sentence marked in colour."
 
 lehre_title = "Using it in teaching"
@@ -70,7 +69,7 @@ cards = [
 ]
 
 inst_title = "Install"
-inst_text = "Three ways, depending on your environment. The settings are described in <a href=\"https://github.com/christiansteier/NextPad/blob/main/server/README.md\"><code>server/README.md</code></a>."
+inst_text = "Three ways, depending on your environment. The settings are described in <a href=\"https://github.com/NextPad/NextPad/blob/main/server/README.md\"><code>server/README.md</code></a>."
 ways = [
   { title = "Binary", text = "Download for Linux x86-64 from the releases and start it.", code = "<span class=\"c\"># data directory and address</span>\nNEXTPAD_DATA=/srv/nextpad \\\nNEXTPAD_PUBLIC_URL=https://pads.example.org \\\n./nextpad", link = "releases/latest", link_text = "Go to releases" },
   { title = "Container", text = "With docker compose following linuxserver.io, data under <code>./config</code>.", code = "cp .env.example .env\ndocker compose up -d --build", link = "blob/main/docs/docker.md", link_text = "Container guide" },

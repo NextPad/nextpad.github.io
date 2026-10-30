@@ -13,7 +13,7 @@
   <div class="wrap">
     <div>
       <p class="kicker">{{ x.kicker }}<span class="ver">{{ trans(key="version_label", lang=lang) }} {{ config.extra.version }}</span></p>
-      <h1>{{ x.h1 }} <em>{{ x.h1_em }}</em>.</h1>
+      <h1>{{ x.h1 }}{% if x.h1_em %} <em>{{ x.h1_em }}</em>{% endif %}.</h1>
       <p class="lead">{{ x.lead | safe }}</p>
       <div class="actions">
         <a class="btn main" href="{{ config.extra.repo }}/releases/latest">{{ trans(key="download", lang=lang) | replace(from="{v}", to=config.extra.version) }}</a>
@@ -21,7 +21,7 @@
       </div>
       <ul class="facts">{% for f in x.facts %}<li>{{ f }}</li>{% endfor %}</ul>
     </div>
-    <figure class="shot"><img src="{{ root }}bilder/pad.webp" width="1600" height="1000" alt="{{ x.hero_alt }}"></figure>
+    <figure class="shot"><img src="{{ root }}bilder/pad.webp" width="1600" height="1000" fetchpriority="high" alt="{{ x.hero_alt }}"></figure>
   </div>
 </div>
 

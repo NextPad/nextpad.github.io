@@ -1,13 +1,12 @@
 +++
 title = "NextPad · Etherpad-Alternative für Lehre, Moodle und ILIAS"
-description = "Gemeinsam schreiben in Seminar und Vorlesung: Pad mit Zeitleiste, Ideensammlung, Quiz und Zeichenbrett. Ohne Konto für Studierende, Daten an der Hochschule."
+description = "Gemeinsam schreiben in der Lehre: Pad mit Zeitleiste, Ideensammlung, Quiz und Zeichenbrett. Ohne Konto für Teilnehmer*innen, Daten auf dem eigenen Server."
 
 [extra]
 kicker = "Für die Lehre · freie Software (EUPL-1.2)"
-h1 = "Gemeinsam schreiben, spielerisch lernen und zeichnen,"
-h1_em = "in Seminar und Vorlesung"
-lead = "Gruppen schreiben im selben Text, das Plenum sammelt Fragen und stimmt ab, Teams treten im Quiz gegeneinander an. Studierende brauchen kein Konto, ein Link oder QR-Code genügt, auch am Telefon. Die Daten bleiben auf dem Server der Hochschule."
-facts = ["ohne Konto für Studierende", "auch am Telefon", "Daten bleiben an der Hochschule", "für sich allein oder in Moodle und ILIAS", "Deutsch und Englisch"]
+h1 = "Gemeinsam schreiben, spielerisch lernen und zeichnen"
+lead = "Gruppen schreiben im selben Text, das Plenum sammelt Fragen und stimmt ab, Teams treten im Quiz gegeneinander an. Teilnehmer*innen brauchen kein Konto, ein Link oder QR-Code genügt, am Desktop und auf mobilen Geräten. Die Daten bleiben auf dem Server der Bildungseinrichtung."
+facts = ["ohne Konto für die Teilnehmer*innen", "am Desktop und auf mobilen Geräten", "Daten bleiben auf dem eigenen Server", "für sich allein oder in Moodle und ILIAS", "Deutsch und Englisch"]
 hero_alt = "Ein Pad im Browser: Überschrift „Audio-Feature: Klang des Campus“, eine Liste mit Aufgaben für Lea, Jonas und Mira, Jonas’ neuer Satz farbig markiert."
 
 lehre_title = "In der Lehre einsetzen"
@@ -70,7 +69,7 @@ cards = [
 ]
 
 inst_title = "Installieren"
-inst_text = "Drei Wege, je nach Umgebung. Die Einstellungen beschreibt <a href=\"https://github.com/christiansteier/NextPad/blob/main/server/README.md\"><code>server/README.md</code></a>."
+inst_text = "Drei Wege, je nach Umgebung. Die Einstellungen beschreibt <a href=\"https://github.com/NextPad/NextPad/blob/main/server/README.md\"><code>server/README.md</code></a>."
 ways = [
   { title = "Binary", text = "Für Linux x86-64 aus den Releases laden und starten.", code = "<span class=\"c\"># Datenverzeichnis und Adresse</span>\nNEXTPAD_DATA=/srv/nextpad \\\nNEXTPAD_PUBLIC_URL=https://pads.example.org \\\n./nextpad", link = "releases/latest", link_text = "Zu den Releases" },
   { title = "Container", text = "Mit docker compose nach dem Muster von linuxserver.io, Daten unter <code>./config</code>.", code = "cp .env.example .env\ndocker compose up -d --build", link = "blob/main/docs/docker.md", link_text = "Anleitung Container" },

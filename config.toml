@@ -8,8 +8,8 @@ build_search_index = false
 generate_feeds = false
 
 [extra]
-version = "0.17.3"
-repo = "https://github.com/christiansteier/NextPad"
+version = "0.18.0"
+repo = "https://github.com/NextPad/NextPad"
 
 [translations]
 skip = "Zum Inhalt"
