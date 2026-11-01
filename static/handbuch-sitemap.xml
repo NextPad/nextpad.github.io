@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://nextpad.github.io/handbuch/</loc></url>
   <url><loc>https://nextpad.github.io/handbuch/pad/anlegen.html</loc></url>
+  <url><loc>https://nextpad.github.io/handbuch/einsatz/</loc></url>
   <url><loc>https://nextpad.github.io/handbuch/quiz/</loc></url>
   <url><loc>https://nextpad.github.io/handbuch/quiz/anlegen.html</loc></url>
   <url><loc>https://nextpad.github.io/handbuch/quiz/buzzer-messen.html</loc></url>
@@ -17,6 +18,7 @@
   <url><loc>https://nextpad.github.io/handbuch/ilias/einrichten.html</loc></url>
   <url><loc>https://nextpad.github.io/en/manual/</loc></url>
   <url><loc>https://nextpad.github.io/en/manual/pad/create.html</loc></url>
+  <url><loc>https://nextpad.github.io/en/manual/scenarios/</loc></url>
   <url><loc>https://nextpad.github.io/en/manual/quiz/</loc></url>
   <url><loc>https://nextpad.github.io/en/manual/quiz/create.html</loc></url>
   <url><loc>https://nextpad.github.io/en/manual/quiz/measure-buzzer.html</loc></url>
