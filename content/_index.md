@@ -55,7 +55,7 @@ themes = [
   { name = "Rund", wert = "rund", text = "Große Rundungen, Knöpfe als Pillen, Blau als Akzent. Die Schrift Lexend wurde für gute Lesbarkeit entworfen. Logo und Hausfarben lassen sich in der Verwaltung setzen.", alt = "Startseite im Theme rund: helles Blau im Hintergrund, Karte mit großen Rundungen, Knopf als blaue Pille, Schrift Lexend." },
   { name = "Leicht rund", wert = "colibris", text = "Wie Etherpad mit Quicksand und Bleistift-Hintergrund. Vertraut für alle, die vorher mit Etherpad gearbeitet haben.", alt = "Startseite im Theme leicht rund: grüner Hintergrund mit Buntstiften, dunkles Feld mit „Neues Pad“ und Eingabe für den Namen." },
 ]
-themes_hint = "Das Theme wählt die Variable <code>NEXTPAD_THEME</code>, bei YunoHost die Installation. Einrichtungen mit eigenem Corporate Design nutzen das Theme <code>hsd</code> als Vorlage."
+themes_hint = "Das Theme wählt die Variable <code>NEXTPAD_THEME</code>, bei YunoHost die Installation. Einrichtungen mit eigenem Corporate Design legen ein Theme mit <code>theme.json</code> in den Theme-Ordner, Vorlage ist das Beispiel im Repo."
 
 ops_kicker = "Für den Betrieb"
 ops_title = "Datenschutz, Betrieb, Barrierefreiheit"
@@ -92,7 +92,7 @@ imgs = [
 tag = "Pad"
 title = "Schreiben mit Zeitleiste"
 text = ["Alle schreiben gleichzeitig im selben Text, jede Person in ihrer Farbe. Die Zeitleiste spielt die Entstehung Schritt für Schritt ab."]
-items = ["Markdown beim Tippen und Einfügen: <code>#</code> für Überschriften, <code>-</code> für Listen, <code>- [ ]</code> für Kästchen, Tabellen mit <code>|</code>, Codeblöcke mit <code>```</code>", "Daumen hoch und runter im Text, eine Stimme je Person", "Inhaltsverzeichnis am Rand oder als Block im Text", "Zeitleiste mit Zeit und Autor je Schritt, frühere Fassung wiederherstellen", "Export als HTML, Markdown, Text und PDF"]
+items = ["Markdown beim Tippen und Einfügen: <code>#</code> für Überschriften, <code>-</code> für Listen, <code>- [ ]</code> für Kästchen, Tabellen mit <code>|</code>, Codeblöcke mit <code>```</code>, Zitate mit <code>&gt;</code>, Links als <code>[Text](Adresse)</code>", "Daumen hoch und runter im Text, eine Stimme je Person", "Inhaltsverzeichnis am Rand oder als Block im Text", "Zeitleiste mit Zeit und Autor je Schritt, frühere Fassung wiederherstellen", "Export als HTML, Markdown, Text und PDF"]
 imgs = [{ src = "zeitleiste.webp", w = 1600, h = 1000, alt = "Zeitleiste über dem Pad: Der Schieberegler steht kurz vor dem Ende, Jonas’ Satz ist erst halb geschrieben." }]
 
 [[extra.features]]

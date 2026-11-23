@@ -55,7 +55,7 @@ themes = [
   { name = "Rounded", wert = "rund", text = "Large radii, pill buttons, blue as accent. The font Lexend was designed for readability. Logo and house colours can be set in the admin pages.", alt = "Start page in the rounded look: light blue background, card with large radii, blue pill button, font Lexend." },
   { name = "Slightly rounded", wert = "colibris", text = "Like Etherpad with Quicksand and the pencil background. Familiar to everyone who worked with Etherpad before.", alt = "Start page in the slightly rounded look: green background with coloured pencils, dark panel with “New pad” and a field for the name." },
 ]
-themes_hint = "The variable <code>NEXTPAD_THEME</code> picks the look, on YunoHost the installation does. Institutions with their own corporate design use the <code>hsd</code> look as a template."
+themes_hint = "The variable <code>NEXTPAD_THEME</code> picks the look, on YunoHost the installation does. Institutions with their own corporate design put a theme with <code>theme.json</code> into the theme folder; the example in the repository is the template."
 
 ops_kicker = "For operation"
 ops_title = "Privacy, operation, accessibility"
@@ -92,7 +92,7 @@ imgs = [
 tag = "Pad"
 title = "Writing with a timeline"
 text = ["Everyone writes in the same text at the same time, each person in their own colour. The timeline replays how the text came about step by step."]
-items = ["Markdown while typing and pasting: <code>#</code> for headings, <code>-</code> for lists, <code>- [ ]</code> for checkboxes, tables with <code>|</code>, code blocks with <code>```</code>", "Thumbs up and down in the text, one vote per person", "Table of contents in the margin or as a block in the text", "Timeline with time and author per step, restore an earlier version", "Export as HTML, Markdown, text and PDF"]
+items = ["Markdown while typing and pasting: <code>#</code> for headings, <code>-</code> for lists, <code>- [ ]</code> for checkboxes, tables with <code>|</code>, code blocks with <code>```</code>, quotes with <code>&gt;</code>, links as <code>[text](address)</code>", "Thumbs up and down in the text, one vote per person", "Table of contents in the margin or as a block in the text", "Timeline with time and author per step, restore an earlier version", "Export as HTML, Markdown, text and PDF"]
 imgs = [{ src = "zeitleiste.webp", w = 1600, h = 1000, alt = "Timeline above the pad: the slider is just before the end, Jonas’ sentence is only half written." }]
 
 [[extra.features]]
